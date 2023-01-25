@@ -1,8 +1,14 @@
-﻿class Program
+﻿using System.Text.Json.Serialization;
+
+class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Word!");
+        string grif; //переменная для материала грифа 
+        Console.WriteLine("Введите материал грифа");
+        grif = Console.ReadLine();
+
+        Console.WriteLine("Материал грифа " + grif);
+        
     }
 }
-
