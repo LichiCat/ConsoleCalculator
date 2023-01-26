@@ -1,27 +1,15 @@
-﻿using System.Text.Json.Serialization;
+﻿using System;
 
 class Program
 {
     static void Main(string[] args)
-    {
-        //Материал грифа.
-        string grif; 
-
-        //Материал деки гитары.
-        string body; 
-
-        //Колисчество ладов.
-        int frets;   
-
-        //Вес.
-        int weight;
-        
-        //Стоимость.
-        int price;   
-
-        //Переменные для цикла вывода значений.
-        int k=1, t;
-
+    {       
+        string grif;      
+        string body;        
+        int frets;          
+        int weight;            
+        int price;       
+       
         Console.WriteLine("Введите материал грифа"); 
         grif = Console.ReadLine();
 
@@ -41,38 +29,40 @@ class Program
                 "где 1-Материал грифа,  2-Материал деки, 3-Количество ладов, 4-Вес, 5-Стоимость\n" +
                 "Для выхода введите значение  0");
 
-        while (k != 0)
-        { 
-            t = Convert.ToInt32(Console.ReadLine());
+        //Переменная для выбора.
+        int choice=2222;
 
-            if (t == 0)
-            {   
-                // выход из цикла
-                k = 0; 
+        while (choice != 0)
+        {
+            choice = Convert.ToInt32(Console.ReadLine());
+
+            // выход из цикла
+            if (choice == 0)
+            {
+                choice = 0; 
             }
 
-            if (t == 1)
+            else if (choice == 1)
             {
-
                 Console.WriteLine("Материал грифа: " + grif); 
             }
 
-            if (t == 2)
+            else if (choice == 2)
             {
                 Console.WriteLine("Материал деки гитары: " + body); 
             }
 
-            if (t == 3)
+            else if (choice == 3)
             {
                 Console.WriteLine("Количество ладов гитары: " + frets); 
             }
 
-            if (t == 4)
+            else if (choice == 4)
             {
                 Console.WriteLine("Вес гитары: " + weight); 
             }
 
-            if (t == 5)
+            else if (choice == 5)
             {
                 Console.WriteLine("Стоимость гитары: " + price); 
             }
