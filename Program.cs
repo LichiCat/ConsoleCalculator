@@ -47,6 +47,11 @@ class Program
                 Console.WriteLine("Введено неправильное значение");
             }
 
+            else if (choice < 0)
+            {
+                Console.WriteLine("Введено неправильное значение");
+            }
+
             else if (choice == 1)
             {
                 Console.WriteLine("Материал грифа: " + grif); 
