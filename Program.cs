@@ -42,16 +42,6 @@ class Program
                 choice = 0; 
             }
 
-            else if (choice > 5)
-            {
-                Console.WriteLine("Введено неправильное значение");
-            }
-
-            else if (choice < 0)
-            {
-                Console.WriteLine("Введено неправильное значение");
-            }
-
             else if (choice == 1)
             {
                 Console.WriteLine("Материал грифа: " + grif); 
@@ -75,6 +65,10 @@ class Program
             else if (choice == 5)
             {
                 Console.WriteLine("Стоимость гитары: " + price); 
+            }
+            else
+            {
+                Console.WriteLine("Введено неправильное значение");
             }
         }
     }
