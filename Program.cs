@@ -30,16 +30,21 @@ class Program
                 "Для выхода введите значение  0");
 
         //Переменная для выбора.
-        int choice=2222;
+        int choice = 1;
 
-        while (choice != 0)
-        {
+        while(choice != 0)
+        {          
             choice = Convert.ToInt32(Console.ReadLine());
 
             // выход из цикла
             if (choice == 0)
             {
                 choice = 0; 
+            }
+
+            else if (choice > 5)
+            {
+                Console.WriteLine("Введено неправильное значение");
             }
 
             else if (choice == 1)
